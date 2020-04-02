@@ -1,0 +1,14 @@
+{
+    "name": "michalrokita/blue-media-sdk",
+    "description": "PHP library to work with Blue Media API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michal Rokita",
+            "email": "michal.rokita17@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
