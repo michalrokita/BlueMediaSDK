@@ -38,4 +38,4 @@ Po tym jak już przeprowadzimy odpowiednie operacje w kodzie na podstawie danych
 ```php
   $bmService->receiver()->confirmReceivingNotification();
 ```
-Metoda ta sporządzi odpowiednio spreparowany kod XML biorąc pod uwagę wcześniej odebraną notyfikację, a nastepnie zwróci go z odpowiednim nagłówkiem komendą echo. Z tego też powodu nie należy ustalać nagłówka samemu.
+Metoda ta sporządzi odpowiednio spreparowany kod XML biorąc pod uwagę wcześniej odebraną notyfikację, a nastepnie zwróci go z odpowiednim nagłówkiem komendą `echo`. Z tego też powodu nie należy ustalać nagłówka samemu.
