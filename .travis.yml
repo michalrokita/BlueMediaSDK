@@ -1,3 +1,4 @@
 language: php
-rvm:
-  - 7.4.4
+php:
+  - '7.4'
+install: composer install
