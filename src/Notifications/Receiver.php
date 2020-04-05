@@ -6,7 +6,7 @@ namespace michalrokita\BlueMediaSDK\Notifications;
 
 use LaLit\XML2Array;
 use michalrokita\BlueMediaSDK\DataTypes\BMConfirmation;
-use michalrokita\BlueMediaSDK\DataTypes\BMHash;
+use michalrokita\BlueMediaSDK\Helpers\BMHash;
 use michalrokita\BlueMediaSDK\DataTypes\BMNotification;
 use michalrokita\BlueMediaSDK\Exceptions\InvalidHashException;
 use michalrokita\BlueMediaSDK\Exceptions\NotificationNotReceivedException;

@@ -10,8 +10,7 @@ Przy ostatnim projekcie, klient poprosił mnie o zaimplementowanie płatności B
 |Potwierdzenie otrzymania ITN| ✅ |
 | Odbiór notyfikacji ISTN | ✅ |
 |Potwierdzenie otrzymania ISTN| ✅ |
-|Utworzenie sesji płatniczej bez koszyka|❌|
+|Utworzenie linku do sesji płatniczej bez koszyka|✅|
 |Utworzenie sesji płatniczej z koszykiem|❌|
 |Obsługa przekierowania z Blue Media|❌|
-|Utworzenie sesji płatniczej z koszykiem|❌|
 |Odpytanie BM o listę kanałów płatności|❌|
