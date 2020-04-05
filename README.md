@@ -36,3 +36,17 @@ Po tym jak już przeprowadzimy odpowiednie operacje w kodzie na podstawie danych
   $bmService->receiver()->confirmReceivingNotification();
 ```
 Metoda ta sporządzi odpowiednio spreparowany kod XML biorąc pod uwagę wcześniej odebraną notyfikację, a nastepnie zwróci go z odpowiednim nagłówkiem komendą `echo`. Z tego też powodu nie należy ustalać nagłówka samemu.
+
+### 3. Generowanie linku do sesji płatniczej bez koszyka
+Na początku należy zainicjalizować nową instancje klasy Transaction, która przetrzymuje dane na temat zawieranej transakcji. Przy tworzeniu instancji wymagane są tylko parametry niezbędne do utworzenia sesji wg specyfikacji Blue Media. Opcjonalne parametry można dodać do instancji wykorzystując wbudowane setter-y.
+
+Jakoże Blue Media przyjmuję kwotę jako float skonwertowany na stringa, to do konstruktora Transaction można należy podać float-a. Nie będziemy wykonywać żadnych operacji na tej liczbie ani też nie potrzebujemy dokładności, dlatego możemy sobie pozwolić na float.
+```php
+  $transaction = new Transaction('orderID', 100.00);
+```
+*Pamiętaj o przestrzeni michalrokita\BlueMediaSDK\Transactions --> use michalrokita\BlueMediaSDK\Transactions\Transaction;*
+
+Następnie, aby wygenerować link należy wywołać poniższy kod:
+```php
+  $paymentLink = $bmService->payment()->generatePaymentLink($transaction);
+```
