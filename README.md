@@ -44,7 +44,8 @@ Jakoże Blue Media przyjmuję kwotę jako float skonwertowany na stringa, to do 
 ```php
   $transaction = new Transaction('orderID', 100.00);
 ```
-*Pamiętaj o przestrzeni michalrokita\BlueMediaSDK\Transactions --> use michalrokita\BlueMediaSDK\Transactions\Transaction;*
+*Pamiętaj o przestrzeni nazw:* `michalrokita\BlueMediaSDK\Transactions`
+--> `use michalrokita\BlueMediaSDK\Transactions\Transaction;`
 
 Następnie, aby wygenerować link należy wywołać poniższy kod:
 ```php
