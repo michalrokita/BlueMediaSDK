@@ -4,6 +4,8 @@
 
 Przy ostatnim projekcie, klient poprosił mnie o zaimplementowanie płatności BlueMedia w naszej platformie opartej o PHP. Z uwagi na to, że powyższa firma oferuje tylko SDK na platformy mobilne stwierdziłem, że sam napiszę proste SDK, które będzie pokrywać dokumentację BlueMedia API.
 
+Indykator sugeruję kompatybilność z PHP >= 7.4, ale tak naprawde zadziała z PHP >= 7.1. 7.4 jest wymagane do obsługi testów jednostkowych, bo dev wykorzystuję wersje 9 PHPUnit-a.
+
 | Funkcjonalność  | Dostępna |
 |--|:--:|
 | Odbiór notyfikacji ITN / IPN / ISTN | ✅ |
@@ -40,7 +42,7 @@ Metoda ta sporządzi odpowiednio spreparowany kod XML biorąc pod uwagę wcześn
 ### 3. Generowanie linku do sesji płatniczej bez koszyka
 Na początku należy zainicjalizować nową instancje klasy Transaction, która przetrzymuje dane na temat zawieranej transakcji. Przy tworzeniu instancji wymagane są tylko parametry niezbędne do utworzenia sesji wg specyfikacji Blue Media. Opcjonalne parametry można dodać do instancji wykorzystując wbudowane setter-y.
 
-Jakoże Blue Media przyjmuję kwotę jako float skonwertowany na stringa, to do konstruktora Transaction można należy podać float-a. Nie będziemy wykonywać żadnych operacji na tej liczbie ani też nie potrzebujemy dokładności, dlatego możemy sobie pozwolić na float.
+Jakoże Blue Media przyjmuję kwotę jako float skonwertowany na stringa, to do konstruktora Transaction należy podać float-a. Nie będziemy wykonywać żadnych operacji na tej liczbie ani też nie potrzebujemy dokładności, dlatego możemy sobie pozwolić na float.
 ```php
   $transaction = new Transaction('orderID', 100.00);
 ```
