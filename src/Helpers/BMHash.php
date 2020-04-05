@@ -84,7 +84,7 @@ class BMHash
             }
         } else {
             foreach (self::$paramsOrder as $key) {
-                if (isset($params[$key]) && $this->params[$key] !== null && $this->params[$key] !== '') {
+                if (isset($this->params[$key]) && $this->params[$key] !== null && $this->params[$key] !== '') {
                     $concat[] = $this->params[$key];
                 }
             }

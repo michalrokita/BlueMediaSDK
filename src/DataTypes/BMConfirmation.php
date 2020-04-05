@@ -5,7 +5,7 @@ namespace michalrokita\BlueMediaSDK\DataTypes;
 
 
 use michalrokita\BlueMediaSDK\BMService;
-use michalrokita\BlueMediaSDK\Helpers\Response;
+use michalrokita\BlueMediaSDK\Helpers\BMHash;
 
 class BMConfirmation
 {
