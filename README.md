@@ -15,6 +15,11 @@ Indykator sugeruję kompatybilność z PHP >= 7.4, ale tak naprawde zadziała z
 |Obsługa przekierowania z Blue Media|❌|
 |Odpytanie BM o listę kanałów płatności|❌|
 
+## Instalacja (Composer)
+```
+  composer require michalrokita/blue-media-sdk
+```
+
 ## Dokumentacja
 
 ### 1. Konfiguracja BMService
