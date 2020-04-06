@@ -22,7 +22,7 @@
     },
     "require": {
         "guzzlehttp/guzzle": "~6.0",
-        "digitickets/lalit": "dev-master",
+        "digitickets/lalit": "3.1.0",
         "ext-libxml": "*",
         "ext-simplexml": "*",
         "ext-json": "*",
