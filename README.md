@@ -17,7 +17,7 @@ Indykator sugeruję kompatybilność z PHP >= 7.4, ale tak naprawde zadziała z
 
 ## Instalacja (Composer)
 ```
-  composer require michalrokita/blue-media-sdk
+  composer require michalrokita/blue-media-sdk:dev-master
 ```
 
 ## Dokumentacja
