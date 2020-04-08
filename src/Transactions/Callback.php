@@ -53,6 +53,17 @@ class Callback
     }
 
     /**
+     * @return string
+     * @throws CallbackNotReceivedException
+     * @throws ConfigWasNotSetException
+     * @throws InvalidHashException
+     */
+    public function getAmount(): string
+    {
+        return $this->getProperty('Amount');
+    }
+
+    /**
      * @param string $key
      * @return mixed
      * @throws CallbackNotReceivedException
