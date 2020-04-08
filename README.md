@@ -4,8 +4,6 @@
 
 Przy ostatnim projekcie, klient poprosił mnie o zaimplementowanie płatności BlueMedia w naszej platformie opartej o PHP. Z uwagi na to, że powyższa firma oferuje tylko SDK na platformy mobilne stwierdziłem, że sam napiszę proste SDK, które będzie pokrywać dokumentację BlueMedia API.
 
-Indykator sugeruję kompatybilność z PHP >= 7.4, ale tak naprawde zadziała z PHP >= 7.1. 7.4 jest wymagane do obsługi testów jednostkowych, bo dev wykorzystuję wersje 9 PHPUnit-a.
-
 | Funkcjonalność  | Dostępna |
 |--|:--:|
 | Odbiór notyfikacji ITN / IPN / ISTN | ✅ |
