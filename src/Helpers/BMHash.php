@@ -35,11 +35,18 @@ class BMHash
 
     /**
      * @param BMNotification $notification
+     * @param bool $orderCheck
      * @throws \michalrokita\BlueMediaSDK\Exceptions\ConfigWasNotSetException
      */
-    public static function verify(BMNotification $notification): void
+    public static function verify(BMNotification $notification, bool $orderCheck = true): void
     {
-        $valid = hash_equals(self::make($notification->getParams()), $notification->getHash());
+        if ($orderCheck) {
+            $hash = self::make($notification->getParams());
+        } else {
+            $hash = self::makeWithoutOrdering($notification->getParams());
+        }
+
+        $valid = hash_equals($hash, $notification->getHash());
 
         $notification->setValid($valid);
     }
@@ -84,6 +91,7 @@ class BMHash
             }
         } else {
             foreach (self::$paramsOrder as $key) {
+                $key = strtolower($key);
                 if (isset($this->params[$key]) && $this->params[$key] !== null && $this->params[$key] !== '') {
                     $concat[] = $this->params[$key];
                 }
@@ -97,7 +105,11 @@ class BMHash
 
     private function setParams(array $params): self
     {
-        $this->params = $params;
+        $lowerParams = [];
+        foreach ($params as $key => $value) {
+            $lowerParams[strtolower($key)] = $value;
+        }
+        $this->params = $lowerParams;
         return $this;
     }
 

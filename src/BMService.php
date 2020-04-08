@@ -6,6 +6,7 @@ namespace michalrokita\BlueMediaSDK;
 
 use michalrokita\BlueMediaSDK\Exceptions\ConfigWasNotSetException;
 use michalrokita\BlueMediaSDK\Notifications\Receiver;
+use michalrokita\BlueMediaSDK\Transactions\Callback;
 use michalrokita\BlueMediaSDK\Transactions\Payment;
 
 class BMService
@@ -22,6 +23,11 @@ class BMService
      * @var Payment
      */
     private $payment;
+
+    /**
+     * @var Callback
+     */
+    private $callback;
 
     public function __construct(BMConfig $config)
     {
@@ -64,5 +70,17 @@ class BMService
         }
 
         return $this->payment = new Payment();
+    }
+
+    /**
+     * @return Callback
+     */
+    public function callback()
+    {
+        if ($this->callback) {
+            return $this->callback;
+        }
+
+        return $this->callback = new Callback();
     }
 }
