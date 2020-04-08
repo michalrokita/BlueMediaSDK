@@ -10,7 +10,7 @@ Przy ostatnim projekcie, klient poprosił mnie o zaimplementowanie płatności B
 |Potwierdzenie otrzymania ITN / IPN / ISTN | ✅ |
 |Utworzenie linku do sesji płatniczej bez koszyka|✅|
 |Utworzenie sesji płatniczej z koszykiem|❌|
-|Obsługa przekierowania z Blue Media|❌|
+|Obsługa przekierowania z Blue Media|✅|
 |Odpytanie BM o listę kanałów płatności|❌|
 
 ## Instalacja (Composer)
@@ -55,4 +55,12 @@ Jakoże Blue Media przyjmuję kwotę jako float skonwertowany na stringa, to do 
 Następnie, aby wygenerować link należy wywołać poniższy kod:
 ```php
   $paymentLink = $bmService->payment()->generatePaymentLink($transaction);
+```
+
+### 4. Obsługa przekierowania użytkownika z Blue Media
+W celu pobrania danych o zamówieniu i automatycznej weryfikacji hasha w tle wywołaj poniższy kod. W przypadku błędu autoryzacji hasha metoda zwróci wyjątek.
+```php
+  $serviceId = $bmService->callback()->getServiceId();
+  $orderId = $bmService->callback()->getOrderId();
+  $amount = $bmService->callback()->getAmount();
 ```
