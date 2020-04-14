@@ -58,11 +58,9 @@ class Transaction
      * Transaction constructor.
      * @param string $orderId
      * @param float $amount
-     * @throws \michalrokita\BlueMediaSDK\Exceptions\ConfigWasNotSetException
      */
     public function __construct(string $orderId, float $amount)
     {
-        $this->serviceId = BMService::getConfig()->getServiceId();
         $this->orderID = $orderId;
         $this->amount = new Amount($amount);
     }
