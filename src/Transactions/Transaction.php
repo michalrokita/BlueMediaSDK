@@ -17,7 +17,7 @@ class Transaction
     /**
      * @var string
      */
-    private $orderId;
+    private $orderID;
 
     /**
      * @var Amount
@@ -32,7 +32,7 @@ class Transaction
     /**
      * @var int
      */
-    private $gatewayId;
+    private $gatewayID;
 
     /**
      * @var Currency
@@ -63,7 +63,7 @@ class Transaction
     public function __construct(string $orderId, float $amount)
     {
         $this->serviceId = BMService::getConfig()->getServiceId();
-        $this->orderId = $orderId;
+        $this->orderID = $orderId;
         $this->amount = new Amount($amount);
     }
 
@@ -83,7 +83,7 @@ class Transaction
      */
     public function setGatewayId(int $gatewayId): Transaction
     {
-        $this->gatewayId = $gatewayId;
+        $this->gatewayID = $gatewayId;
         return $this;
     }
 
