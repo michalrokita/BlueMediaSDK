@@ -20,10 +20,13 @@ class Payment
     {
         $config = BMService::getConfig();
 
-        $transactionParams = [];
-        $transactionParams['ServiceID'] = $config->getServiceID();
         $transactionParams = $transaction->getTransactionParams();
-        $transactionParams['Hash'] = BMHash::makeWithoutOrdering($transactionParams);
+        $hash = BMHash::makeWithoutOrdering($transactionParams);
+
+        $params = [];
+        $params['ServiceID'] = $config->getServiceID();
+        array_merge($params, $transactionParams);
+        $params['Hash'] = $hash;
 
         return UrlGenerator::build($config->getServiceUrl(), $transactionParams);
     }
