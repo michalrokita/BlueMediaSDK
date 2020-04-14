@@ -28,6 +28,6 @@ class Payment
         array_merge($params, $transactionParams);
         $params['Hash'] = $hash;
 
-        return UrlGenerator::build($config->getServiceUrl(), $transactionParams);
+        return UrlGenerator::build($config->getServiceUrl(), $params);
     }
 }
