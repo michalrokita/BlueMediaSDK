@@ -41,4 +41,15 @@ class UrlGenerator
 
         return $paramsString;
     }
+
+    private function arrayLastKey(array $array): int
+    {
+        if (function_exists('array_key_last')) {
+            return array_key_last($array);
+        }
+
+        end($array);
+        return key($array);
+    }
+
 }
