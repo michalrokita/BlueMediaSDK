@@ -132,7 +132,16 @@ class Transaction
      */
     public function getTransactionParams(): array
     {
-        return get_object_vars($this);
+        $properties = get_object_vars($this);
+        $notEmpty = [];
+
+        foreach ($properties as $key => $value) {
+            if (isset($value) && $value !== null) {
+                $notEmpty[$key] = $value;
+            }
+        }
+
+        return $notEmpty;
     }
 
 }
