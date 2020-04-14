@@ -17,6 +17,6 @@ class Amount
 
     public function __toString(): string
     {
-        return (string)$this->amount;
+        return number_format($this->amount, 2, '.', '');
     }
 }
