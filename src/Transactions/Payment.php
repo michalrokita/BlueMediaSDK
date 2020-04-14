@@ -25,7 +25,7 @@ class Payment
 
         $params = [];
         $params['ServiceID'] = $config->getServiceID();
-        array_merge($params, $transactionParams);
+        $params = array_merge($params, $transactionParams);
         $params['Hash'] = $hash;
 
         return UrlGenerator::build($config->getServiceUrl(), $params);
