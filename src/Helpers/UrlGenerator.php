@@ -36,13 +36,13 @@ class UrlGenerator
 
         foreach ($params as $key => $param) {
             $paramsString .= "{$key}={$param}";
-            $paramsString .= array_key_last($params) === $param ? '' : '&';
+            $paramsString .= self::arrayLastKey($params) === $param ? '' : '&';
         }
 
         return $paramsString;
     }
 
-    private function arrayLastKey(array $array): int
+    private static function arrayLastKey(array $array): int
     {
         if (function_exists('array_key_last')) {
             return array_key_last($array);
