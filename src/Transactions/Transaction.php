@@ -137,7 +137,7 @@ class Transaction
 
         foreach ($properties as $key => $value) {
             if (isset($value) && $value !== null) {
-                $notEmpty[$key] = $value;
+                $notEmpty[ucfirst($key)] = $value;
             }
         }
 
