@@ -77,7 +77,7 @@ class BMConfirmation
      */
     private function generateHash(): string
     {
-        return BMHash::make($this->params);
+        return BMHash::makeWithoutOrdering($this->params);
     }
 
     private function generateParams(): array
