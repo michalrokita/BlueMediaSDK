@@ -107,8 +107,8 @@ class Receiver
      */
     private function getRawNotification(): ?string
     {
-        if (isset($_GET['transactions'])) {
-            return $_GET['transactions'];
+        if (isset($_POST['transactions'])) {
+            return $_POST['transactions'];
         }
 
         throw new NotificationNotReceivedException();
