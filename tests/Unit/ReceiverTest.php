@@ -30,7 +30,7 @@ class ReceiverTest extends TestCase
          * Exemplar XML changed to base64 taken from
          * https://bluemedia.pl/storage/app/media/Bluemedia_pl/Dokumenty/system_platnosci_online_obsluga_transakcji.pdf
          */
-        $_GET['transactions'] = 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHRyYW5zYWN0aW9uTGlzdD4KPHNlcnZpY2V
+        $_POST['transactions'] = 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHRyYW5zYWN0aW9uTGlzdD4KPHNlcnZpY2V
         JRD4xPC9zZXJ2aWNlSUQ+Cjx0cmFuc2FjdGlvbnM+Cjx0cmFuc2FjdGlvbj4KPG9yZGVySUQ+MTE8L29yZGVySUQ+CjxyZW1vdGVJRD45MTwvcmV
         tb3RlSUQ+CjxhbW91bnQ+MTEuMTE8L2Ftb3VudD4KPGN1cnJlbmN5PlBMTjwvY3VycmVuY3k+CjxnYXRld2F5SUQ+MTwvZ2F0ZXdheUlEPgo8cGF
         5bWVudERhdGU+MjAwMTAxMDExMTExMTE8L3BheW1lbnREYXRlPgo8cGF5bWVudFN0YXR1cz5TVUNDRVNTPC9wYXltZW50U3RhdHVzPgo8cGF5bWV
@@ -55,7 +55,7 @@ class ReceiverTest extends TestCase
          * Exemplar XML changed to base64 taken from
          * https://bluemedia.pl/storage/app/media/Bluemedia_pl/Dokumenty/system_platnosci_online_obsluga_transakcji.pdf
          */
-        $_GET['transactions'] = 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHRyYW5zYWN0aW9uTGlzdD4KPHNlcnZpY2V
+        $_POST['transactions'] = 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHRyYW5zYWN0aW9uTGlzdD4KPHNlcnZpY2V
         JRD4xPC9zZXJ2aWNlSUQ+Cjx0cmFuc2FjdGlvbnM+Cjx0cmFuc2FjdGlvbj4KPG9yZGVySUQ+MTE8L29yZGVySUQ+CjxyZW1vdGVJRD45MTwvcmV
         tb3RlSUQ+CjxhbW91bnQ+MTEuMTE8L2Ftb3VudD4KPGN1cnJlbmN5PlBMTjwvY3VycmVuY3k+CjxnYXRld2F5SUQ+MTwvZ2F0ZXdheUlEPgo8cGF
         5bWVudERhdGU+MjAwMTAxMDExMTExMTE8L3BheW1lbnREYXRlPgo8cGF5bWVudFN0YXR1cz5TVUNDRVNTPC9wYXltZW50U3RhdHVzPgo8cGF5bWV
