@@ -31,7 +31,7 @@ class Response
     private static function prepareXMLElement(array $content): \StdClass
     {
         $return = new \StdClass();
-        $return->rootElement = array_key_first($content);
+        $return->rootElement = ArrayHelper::arrayLastKey($content);
         $return->body = $content[$return->rootElement];
 
         return $return;
