@@ -45,7 +45,7 @@ class BMConfirmation
 
         return [
             'confirmationList' => [
-                'serviceId' => $config->getServiceId(),
+                'serviceID' => $config->getServiceId(),
                 'transactionsConfirmations' => [
                     'transactionConfirmed' => $this->params
                 ],
