@@ -11,7 +11,7 @@ Przy ostatnim projekcie, klient poprosił mnie o zaimplementowanie płatności B
 |Utworzenie linku do sesji płatniczej bez koszyka|✅|
 |Utworzenie sesji płatniczej z koszykiem|❌|
 |Obsługa przekierowania z Blue Media|✅|
-|Odpytanie BM o listę kanałów płatności|❌|
+|Odpytanie BM o listę kanałów płatności|✅|
 
 ## Instalacja (Composer)
 ```
